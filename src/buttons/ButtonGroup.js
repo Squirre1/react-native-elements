@@ -12,6 +12,7 @@ const ButtonGroup = props => {
     selectedIndex,
     containerStyle,
     innerBorderStyle,
+    lastBorderStyle,
     buttonStyle,
     textStyle,
     selectedTextStyle,
@@ -44,6 +45,7 @@ const ButtonGroup = props => {
                   borderRightWidth: innerBorderStyle && innerBorderStyle.width || 1,
                   borderRightColor: innerBorderStyle && innerBorderStyle.color || colors.grey4
                 },
+                i === buttons.length -1 && lastBorderStyle,
                 selectedIndex === i && {backgroundColor: selectedBackgroundColor || 'white'}
               ]}>
               <View style={[styles.textContainer, buttonStyle && buttonStyle]}>
